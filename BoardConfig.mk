@@ -15,7 +15,7 @@
 # inherit from common klte
 -include device/samsung/klte-common/BoardConfigCommon.mk
 
-TARGET_OTA_ASSERT_DEVICE := kltexx,kltelra,kltetmo,kltecan,klteatt,kltedv,klteub,klteacg,kltedcm,klte
+TARGET_OTA_ASSERT_DEVICE := kltexx,kltelra,kltespr,kltetmo,kltecan,klteatt,kltevzw,klteusc,kltedv,klteub,klteacg,kltedcm,klte
 
 # Kernel
 TARGET_KERNEL_VARIANT_CONFIG := msm8974pro_sec_klte_eur_defconfig
@@ -27,6 +27,9 @@ TARGET_UNIFIED_DEVICE := true
 
 # NFC
 BOARD_NFC_CHIPSET := pn547
+
+# Releasetools
+TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/klte
 
 # Partitions
 BOARD_BOOTIMAGE_PARTITION_SIZE := 11534336
