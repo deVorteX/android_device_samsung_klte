@@ -152,6 +152,7 @@ void gsm_properties()
     property_set("telephony.lteOnGsmDevice", "1");
     property_set("ro.telephony.default_network", "9");
     property_set("ro.telephony.ril.v3", "newDialCode");
+    property_set("ro.telephony.ril_class", "KlteRIL");
 }
 
 void cdma_properties()
@@ -159,4 +160,5 @@ void cdma_properties()
     property_set("ro.telephony.ril.v3", "newDriverCallU,newDialCode");
     property_set("telephony.lteOnCdmaDevice", "1");
     property_set("ro.telephony.default_network", "10");
+    property_set("ro.telephony.ril_class", "SamsungQualcommRIL");
 }
