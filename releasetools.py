@@ -45,6 +45,7 @@ def FullOTA_InstallEnd(info):
   info.script.AppendExtra('ifelse(is_substring("G900V", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/hw/pn547/* /system/lib/hw/"));')
 
   info.script.AppendExtra('ifelse(is_substring("G900P", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/cdma/* /system/lib/"));')
+  info.script.AppendExtra('ifelse(is_substring("G900P", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/etc/spr/* /system/etc/"));')
 
   info.script.AppendExtra('ifelse(is_substring("G900R4", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/cdma/* /system/lib/"));')
   info.script.AppendExtra('ifelse(is_substring("G900R4", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/hw/pn547/* /system/lib/hw/"));')
@@ -56,5 +57,6 @@ def FullOTA_InstallEnd(info):
   info.script.AppendExtra('ifelse(is_substring("G900R7", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/hw/pn547/* /system/lib/hw/"));')
 
   info.script.AppendExtra('delete_recursive("/system/lib/hw/pn547/");')
+  info.script.AppendExtra('delete_recursive("/system/etc/spr/");')
   info.script.AppendExtra('delete_recursive("/system/lib/gsm/");')
   info.script.AppendExtra('delete_recursive("/system/lib/cdma/");')
