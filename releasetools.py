@@ -36,7 +36,7 @@ def FullOTA_InstallEnd(info):
   info.script.AppendExtra('ifelse(is_substring("G900W", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/hw/pn547/* /system/lib/hw/"));')
 
   info.script.AppendExtra('ifelse(is_substring("G900I", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
-  info.script.AppendExtra('ifelse(is_substring("G900I", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/hw/pn547/* /system/lib/hw/"));')
+  info.script.AppendExtra('ifelse(is_substring("G900I", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/etc/spr/* /system/etc/"));')
 
   info.script.AppendExtra('ifelse(is_substring("G900M", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/gsm/* /system/lib/"));')
   info.script.AppendExtra('ifelse(is_substring("G900M", getprop("ro.bootloader")), run_program("/sbin/sh", "-c", "busybox cp /system/lib/hw/pn547/* /system/lib/hw/"));')
