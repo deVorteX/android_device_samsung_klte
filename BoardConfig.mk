@@ -37,8 +37,5 @@ BOARD_USERDATAIMAGE_PARTITION_SIZE := 12669926400
 # Radio
 BOARD_RIL_CLASS := ../../../device/samsung/klte/ril
 
-# Releasetools
-TARGET_RELEASETOOLS_EXTENSIONS := device/samsung/klte
-
 # inherit from the proprietary version
 -include vendor/samsung/klte/BoardConfigVendor.mk
