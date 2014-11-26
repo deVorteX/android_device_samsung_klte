@@ -819,10 +819,7 @@ public class KlteRIL extends RIL implements CommandsInterface {
             dialEmergencyCall(address, clirMode, result);
             return;
         }
-        if(!dialCode){
-            super.dial(address, clirMode, uusInfo, result);
-            return;
-        }
+
         RILRequest rr = RILRequest.obtain(RIL_REQUEST_DIAL, result);
 
         rr.mParcel.writeString(address);
