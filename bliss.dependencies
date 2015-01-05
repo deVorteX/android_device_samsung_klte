@@ -16,5 +16,11 @@
     "repository": "android_device_samsung_klte-common",
     "target_path": "device/samsung/klte-common",
     "revision": "lp5.0"
-  }
+  },
+  {
+    "remote": "cm",
+    "repository": "android_device_samsung_qcom-common",
+    "target_path": "device/samsung/qcom-common",
+    "revision": "cm-12.0"
+  },
 ]
